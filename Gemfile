@@ -10,6 +10,7 @@ gem 'bundle'
 gem "rspec", "~> 3.9"
 gem "rubocop", "0.79.0"
 gem 'nokogiri'
+gem `bundle install`
 
 
 # You can add more gems as needed
