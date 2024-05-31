@@ -1,13 +1,13 @@
-name: Jekyll Build
+name: Jekyll Build and Deploy
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if it's different
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout repository
