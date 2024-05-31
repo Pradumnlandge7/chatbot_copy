@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
@@ -18,11 +18,13 @@ jobs:
       with:
         ruby-version: 3.2.2  # Change this to the Ruby version you want
 
-    - name: Build Jekyll site
+    - name: Install dependencies
       run: |
         gem install bundler
         bundle install
-        bundle exec jekyll build
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
