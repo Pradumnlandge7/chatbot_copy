@@ -1,2 +1,11 @@
+# Gemfile
+
 source 'https://rubygems.org'
-gem install bundle
+
+# Add your gem dependencies here
+gem 'sinatra'
+gem 'pg'  # Example: PostgreSQL database adapter
+gem 'dotenv'  # Example: For managing environment variables
+gem 'bundle'
+# You can add more gems as needed
+
