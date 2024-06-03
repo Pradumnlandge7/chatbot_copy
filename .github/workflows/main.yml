@@ -16,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.1' # Ensure using the compatible version of Ruby
+          ruby-version: '3.3.0' # Ensure using the compatible version of Ruby
 
       - name: Install Bundler
         run: gem install bundler
