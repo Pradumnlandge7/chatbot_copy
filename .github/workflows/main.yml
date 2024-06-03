@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Jekyll Build
 
 on:
   push:
@@ -7,22 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GH_TOKEN }}
 
-      # Your other steps go here
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '1.8.0' # specify a compatible Ruby version here
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
       - name: Deploy
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m "Deploy changes"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: echo "Deploy step here" # replace with your actual deploy step
