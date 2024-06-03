@@ -1,2 +1,5 @@
-title: Pradumn's Chatbot UI
-description: A simple chatbot interface
+- name: Debug configuration
+  run: cat _config.yml
+
+- name: Debug Gemfile
+  run: cat Gemfile
